@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.css";
+import Row from "./Row/Row";
+import requests from "./requests";
+import Banner from "./Banner/Banner";
+import Nav from "./Nav/Nav";
 function App() {
+  const showLarge = ["fetch_Trending", "fetch_Comedy_Movies"];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Nav />
+      <Banner />
+      {Object.keys(requests).map((type) => (
+        <Row
+          title={type.split("_").splice(1).join(" ")}
+          fetchUrl={requests[type]}
+          isLargeRow={showLarge.includes(type)}
+        />
+      ))}
     </div>
   );
 }
