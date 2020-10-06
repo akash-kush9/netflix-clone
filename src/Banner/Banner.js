@@ -51,17 +51,3 @@ const Banner = () => {
 };
 
 export default Banner;
-// backdrop_path: "/wXXaPMgrv96NkH8KD1TMdS2d7iq.jpg"
-// first_air_date: "2010-10-31"
-// genre_ids: (3) [18, 10759, 10765]
-// id: 1402
-// media_type: "tv"
-// name: "The Walking Dead"
-// origin_country: ["US"]
-// original_language: "en"
-// original_name: "The Walking Dead"
-// overview: "Sheriff's deputy Rick Grimes awakens from a coma to find a post-apocalyptic world dominated by flesh-eating zombies. He sets out to find his family and encounters many other survivors along the way."
-// popularity: 655.857
-// poster_path: "/qgjP2OrrX9gc6M270xdPnEmE9tC.jpg"
-// vote_average: 7.8
-// vote_count: 7880
