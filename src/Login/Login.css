@@ -1,0 +1,112 @@
+.login {
+  height: 100vh;
+  overflow-y: scroll;
+  background: black;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/0f67308d-db59-4393-9502-8e475c69a0b5/7de023fa-e7bc-44ef-a9c3-2e6a18b9ba3c/IN-en-20200928-popsignuptwoweeks-perspective_alpha_website_small.jpg");
+}
+.login__top {
+}
+.login__top > img {
+  height: 60px;
+  object-fit: contain;
+  max-height: 100px;
+}
+.login__center {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 30%;
+  padding: 20px;
+  background: black;
+  border-bottom: 1px solid lightgray;
+  justify-content: center;
+}
+
+.login__container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid gray;
+}
+
+.login__container {
+  color: lightgray;
+}
+.login__container > form {
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+.login__container > form > p {
+  margin-top: 5px;
+  font-size: 15px;
+}
+.login__container > form > input {
+  background-color: rgba(138, 95, 4, 0.5);
+  border: none;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  height: 20px;
+  border-radius: 2px;
+  outline-width: 0;
+}
+.login__container > form > input:focus {
+  background-color: white;
+}
+.login__container > form > button {
+  background-color: red;
+  margin-top: 10px;
+  border-radius: 2px;
+  padding: 10px;
+  font-weight: 800;
+  color: white;
+  border: none;
+  margin-bottom: 10px;
+  outline-width: 0;
+}
+
+.login__signOptions {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.login__optionLeft {
+  display: flex;
+  align-items: center;
+}
+.login__optionLeft > p {
+  margin-left: 5px;
+}
+.login__bottom {
+  margin: 10px;
+  background: black;
+  color: gray;
+  padding-bottom: 20px;
+}
+.login__bottom > p {
+  font-size: 10px;
+}
+.login__bottom > h3 {
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.login__bottom > h5 {
+  cursor: pointer;
+}
+
+.login__bottom > h3 > span {
+  margin-left: 5px;
+  cursor: pointer;
+  color: white;
+  text-decoration: underline;
+}
