@@ -1,23 +1,39 @@
 import React from "react";
 import "./App.css";
-import Row from "./Row/Row";
-import requests from "./requests";
-import Banner from "./Banner/Banner";
-import Nav from "./Nav/Nav";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useHistory,
+} from "react-router-dom";
+import Home from "./Home/Home";
+import Login from "./Login/Login";
+import MovieDetails from "./Home/Row/MovieDetails/MovieDetails";
+import Nav from "./Home/Nav/Nav";
+import { useStateValue } from "./reducers/StateProvider";
 function App() {
-  const showLarge = ["fetch_Trending", "fetch_Comedy_Movies"];
+  const [{ user }, dispatch] = useStateValue();
+  const history = useHistory();
   return (
-    <div className="app">
-      <Nav />
-      <Banner />
-      {Object.keys(requests).map((type) => (
-        <Row
-          title={type.split("_").splice(1).join(" ")}
-          fetchUrl={requests[type]}
-          isLargeRow={showLarge.includes(type)}
-        />
-      ))}
-    </div>
+    <Router>
+      <div className="app">
+        {!user ? (
+          <Login />
+        ) : (
+          <Switch>
+            <Route path="/login">
+              <Login />
+            </Route>
+            <Route path="/movieDetail/:mid">
+              <Nav /> <MovieDetails />
+            </Route>
+            <Route exact path="/">
+              <Nav /> <Home />
+            </Route>
+          </Switch>
+        )}
+      </div>
+    </Router>
   );
 }
 
