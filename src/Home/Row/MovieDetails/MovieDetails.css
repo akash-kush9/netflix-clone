@@ -1,0 +1,121 @@
+.movie {
+  background-color: black;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie__info {
+  padding: 10px 20px;
+  flex: 1;
+  color: white;
+  display: flex;
+}
+.movie__infoLeft {
+  flex: 0.4;
+  margin-left: 20px;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  box-shadow: 0px 0px 20px 1px rgba(225, 225, 225, 0.5);
+}
+.movie__infoLeft > img {
+  width: 90%;
+  height: 100vh;
+  max-height: 500px;
+  object-fit: cover;
+  padding: 5%;
+  min-height: 80%;
+}
+.movie__previewItem {
+  width: 90%;
+  height: 100vh;
+  max-height: 500px;
+  object-fit: cover;
+  padding: 5%;
+}
+.movie__tabIcons {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  justify-content: space-evenly;
+  display: flex;
+}
+.movie__infoRight {
+  border: 1px solid lightgray;
+  flex: 0.6;
+  margin-left: 20px;
+
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px 1px rgba(225, 225, 225, 0.5);
+}
+.movie__title {
+  padding: 20px;
+  font-size: 40px;
+  flex: 1;
+}
+.movie_topContainer {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid lightgray;
+}
+.movie__runInfo {
+  display: flex;
+}
+.movie__runInfo > p {
+  color: gray;
+  padding-left: 20px;
+  padding-right: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.movie_centerContainer {
+  color: white;
+  padding: 20px;
+  max-width: 80%;
+}
+.movie_centerContainer > p {
+  margin-top: 20px;
+  display: flex;
+}
+.movie_centerContainer > p > span {
+  color: gray;
+  min-width: 100px;
+}
+
+.movie_bottomContainer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.movie_bottomContainer > p {
+  color: gray;
+  width: 150px;
+}
+.movie__tabIcons > .MuiButtonBase-root {
+  background-color: white;
+}
+.movie__tabIcons > .MuiButtonBase-root:hover {
+  color: black;
+
+  background-color: gray;
+}
+@media (max-width: 1000px) {
+  .movie__infoLeft {
+    margin-top: 10px;
+    flex: 1;
+  }
+  .movie__infoRight {
+    margin-top: 20px;
+    flex: 1;
+  }
+  .movie__info {
+    padding: 10px 20px;
+    flex: 1;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+}
